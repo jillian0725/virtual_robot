@@ -13,7 +13,11 @@ public class jilliantest extends LinearOpMode {
         telemetry.addData("name", "jillian");
         telemetry.update();
         waitForStart();
-        while (opModeIsActive()) {
+        int counter = 0;
+        while(opModeIsActive()){
+            counter++;
+            telemetry.addData("counter",counter);
+            telemetry.update();
         }
     }
 }
